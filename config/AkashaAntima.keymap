@@ -4,7 +4,7 @@
 #include <dt-bindings/zmk/bt.h>
 #include <physical_layouts.dtsi>
 
-#define FUNC1 1
+#define FUNC 1
 #define NUM 2
 #define MOUSE 3
 #define SCROLL 4
