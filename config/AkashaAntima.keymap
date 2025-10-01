@@ -1,0 +1,74 @@
+#include <behaviors.dtsi>
+#include <dt-bindings/zmk/keys.h>
+#include <dt-bindings/zmk/pointing.h>
+#include <dt-bindings/zmk/bt.h>
+#include <physical_layouts.dtsi>
+
+#define FUNC1 1
+#define FUNC2 2
+#define MOUSE 3
+#define SCROLL 4
+#define BT 5
+ 
+/ {
+
+    behaviors {
+    }; 
+
+   keymap {
+        compatible = "zmk,keymap";
+        default_layer {
+            bindings = <
+&kp TAB       &kp Q     &kp W      &kp E     &kp R          &kp T               &kp Y           &kp U          &kp I      &kp O      &kp P      &kp BKSP
+&lt BT ESC    &kp A     &kp S      &kp D     &kp F          &kp G               &kp H           &kp J          &kp K      &kp L      &kp SEMI   &kp SQT
+&kp LSHFT     &kp Z     &kp X      &kp C     &kp V          &kp B               &kp N           &kp M          &kp COMMA  &kp DOT    &kp UP     &kp FSLH
+&mt LCTL ESC              &kp LGUI  &kp LALT   &lt NUM SPACE  &lt FUNC SPACE    &lt FUNC SPACE  &lt NUM SPACE             &kp LEFT   &kp DOWN   &kp RIGHT
+>;
+       };
+
+       function1_layer {
+           bindings = <
+&kp GRAVE  &kp PG_UP  &kp UP     &kp PG_DN  &kp HOME   &trans         &kp F1     &kp F2     &kp F3     &kp F4     &kp F5     &trans
+&tog_ls    &kp LEFT   &kp DOWN   &kp RIGHT  &kp END    &trans         &kp F6     &kp F7     &kp F8     &kp F9     &kp F10    &trans
+&trans     &kp BKSP   &kp DEL    &trans     &trans     &trans         &kp F11    &kp F12    &trans     &trans     &trans     &trans
+&trans     &trans     &kp LALT              &kp ENTER  &kp ENTER      &kp ENTER  &kp ENTER             &trans     &trans     &trans
+>;
+       };
+
+       function2_layer {
+           bindings = <
+&kp CAPS         &kp N1         &kp N2     &kp N3    &kp N4     &kp N5         &kp N6     &kp N7     &kp N8     &kp N9     &kp N0     &trans
+&trans           &trans         &trans     &trans    &trans     &trans         &kp MINUS  &kp EQUAL  &kp LBKT   &kp RBKT   &kp BSLH   &trans
+&mt LSHFT SPACE  &kp BACKSPACE  &kp DEL    &trans    &trans     &trans         &trans     &kp FSLH   &kp SEMI   &kp SQT    &trans     &trans
+&trans           &kp ENTER      &kp ENTER            &kp ENTER  &kp ENTER      &kp ENTER  &kp ENTER             &trans     &trans     &trans
+>;
+       };
+       
+       mouse_layer {
+           bindings = <
+&trans    &trans  &trans     &trans    &trans     &trans      &trans  &trans    &trans     &trans     &trans     &trans
+&trans    &trans  &trans     &trans    &trans     &trans      &trans  &trans    &trans     &trans     &trans     &trans
+&trans    &trans  &trans     &trans    &trans     &trans      &trans  &trans    &mkp MB1   &mkp MB3   &mkp MB2   &trans
+&trans    &trans  &trans               &trans     &trans      &trans  &trans               &trans     &trans     &trans
+>;
+       };
+
+       scroll_layer {
+           bindings = <
+&trans    &trans  &trans     &trans    &trans     &trans      &trans  &trans    &trans     &trans     &trans     &trans
+&trans    &trans  &trans     &trans    &trans     &trans      &trans  &trans    &trans     &trans     &trans     &trans
+&trans    &trans  &trans     &trans    &trans     &trans      &trans  &trans    &mkp MB1   &mkp MB3   &mkp MB2   &trans
+&trans    &trans  &trans               &trans     &trans      &trans  &trans               &trans     &trans     &trans
+>;
+       };
+
+        bt_layer {
+           bindings = <
+&bt BT_CLR  &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4      &bt BT_CLR_ALL  &trans    &trans     &trans     &trans     &trans
+&trans      &trans        &trans        &trans        &trans        &trans            &trans          &trans    &trans     &trans     &trans     &trans
+&trans      &trans        &trans        &trans        &trans        &trans            &trans          &trans    &trans     &trans     &trans     &trans
+&trans      &trans        &trans                      &trans        &trans            &trans          &trans               &trans     &trans     &trans
+>;
+        };
+    };
+};
