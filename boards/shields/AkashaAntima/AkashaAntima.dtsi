@@ -5,6 +5,7 @@
 / {
     chosen {
         zmk,physical-layout = &layout_Akasha;
+        zephyr,display = &oled;
     };
 
     default_transform: keymap_transform_0 {
