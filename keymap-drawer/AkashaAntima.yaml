@@ -1,6 +1,6 @@
 layout: {zmk_keyboard: AkashaAntima}
 layers:
-  Def:
+  default:
   - TAB
   - Q
   - W
@@ -13,7 +13,7 @@ layers:
   - O
   - P
   - BKSP
-  - {t: ESC, h: BT}
+  - {t: ESC, h: bt}
   - A
   - S
   - D
@@ -40,11 +40,14 @@ layers:
   - {t: ESC, h: LCTL}
   - LGUI
   - LALT
-  - {t: SPACE, h: Num}
-  - {t: SPACE, h: Fnc}
-  - {t: SPACE, h: Fnc}
-  - {t: SPACE, h: Num}
-  Fnc:
+  - {t: SPACE, h: number}
+  - {t: SPACE, h: function}
+  - {t: SPACE, h: number}
+  - {t: SPACE, h: number}
+  - LEFT
+  - DOWN
+  - RIGHT
+  function:
   - GRAVE
   - PG UP
   - UP
@@ -91,7 +94,7 @@ layers:
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
-  Num:
+  number:
   - CAPS
   - '1'
   - '2'
@@ -138,7 +141,7 @@ layers:
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
-  Mouse:
+  mouse:
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
@@ -185,7 +188,7 @@ layers:
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
-  Scr:
+  scroll:
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
@@ -232,7 +235,7 @@ layers:
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
-  BT:
+  bt:
   - BT CLR
   - {t: BT, h: '0'}
   - {t: BT, h: '1'}
