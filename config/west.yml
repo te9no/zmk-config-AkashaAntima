@@ -12,7 +12,8 @@ manifest:
       url-base: https://github.com/te9no
   projects:
     - name: zmk
-      remote: zmkfirmware
+      # remote: zmkfirmware
+      remote: te9no
       revision: main
       import: app/west.yml
     - name: zmk-rgbled-widget
